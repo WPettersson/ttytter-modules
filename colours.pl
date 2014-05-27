@@ -36,7 +36,7 @@ sub underline {
 $handle = sub {
   my $ref = shift;
   my $text = &descape($ref->{'text'});
-  my $arrow = " ==> ";
+  my $arrow = "==>";
   if ($text =~ m/$whoami/i) { $arrow = colored ['green on_red'], '==>'; }
   my $name = &descape($ref->{'user'}->{'name'});
   my $coloredname = colored($name, simple_hash($name));
